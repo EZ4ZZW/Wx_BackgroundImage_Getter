@@ -36,6 +36,10 @@ for meta in metas:
             ImageTitle = meta['content']
     except:
         continue
+
+if ImageUrl == "":
+    print("获取图片背景url失败，请重试")
+    exit(0)    
 try:
     getImage(ImageUrl, ImageTitle)
     print("背景图获取成功,文件名为: "+ImageTitle+'.png')
